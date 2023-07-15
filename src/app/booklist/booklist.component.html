@@ -1,0 +1,22 @@
+<h2>Book List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Book Category</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let books of books">
+            <td>{{books.bname}}</td>
+            <td>{{books.bcategory}}</td>
+            <td>{{books.author}}</td>
+            <td><button (click)="updateBook(books.bid)" class="btn btn-info">
+                Update</button></td>
+             <td><button (click)="deleteBook(books.bid)" class="btn btn-danger">
+                Delete</button></td>
+        </tr>
+    </tbody>
+</table>
